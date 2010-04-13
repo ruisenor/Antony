@@ -8,16 +8,24 @@ header("Content-type: text/plain");
 if (!isset($_GET["w"])) exit();
 
 if ( get_magic_quotes_gpc() ) {
-	$word = stripslashes($_GET["w"]);
+	$raw_words = stripslashes($_GET["w"]);
 	
 } else {
-	$word = $_GET["w"];
+	$raw_words = $_GET["w"];
 }
 
+$words = explode(',', $raw_words);
+
 try {
-	
 	// MySQL Connexion
     $db = new PDO('mysql:host='.$antony_config["db_hostname"].';dbname='.$antony_config["db_dbname"], $antony_config["db_username"], $antony_config["db_password"]);
+} catch(PDOException $e) {
+	echo $e->getMessage();
+}
+
+$words_antonyms = array();
+
+foreach ($words as $i => $word) {
     
     // Try to fetch the antonym locally
     $st = $db->prepare("SELECT antonym, last_update FROM words_antonyms WHERE word = ?");
@@ -49,14 +57,13 @@ try {
         $antonym = $result->antonym;
     }
     
-    echo $antonym;
-    
-    // Close connexion
-    $db = null;
-    
-} catch(PDOException $e) {
-	echo $e->getMessage();
+    $words_antonyms[$word] = $antonym;
 }
+
+echo json_encode($words_antonyms);
+
+// Close connexion
+$db = null;
 
 function get_api_antonym($w) {
     

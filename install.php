@@ -9,7 +9,7 @@ try {
     
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
-    $db->exec("CREATE TABLE `antony`.`words_antonyms` (
+    $db->exec("CREATE TABLE `".$antony_config["db_dbname"]."`.`words_antonyms` (
 					`word` VARCHAR( 100 ) NOT NULL ,
 					`antonym` VARCHAR( 100 ) NOT NULL ,
 					`last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,

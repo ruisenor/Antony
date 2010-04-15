@@ -13,8 +13,27 @@
 
 	<div id="container">
 
-	<div class="padHeader"><p class="editor">Me</p></div>	
-	<div class="padHeader"><p class="editor">Antony</p> <span>is currently editing this document</span></div>	
+	<div class="padHeader">
+		<div class="avatar">
+			<img src="img/you.png">
+		</div>
+		<div class="avatarInfo">
+			<p class="editor">You</p>
+			<span id="uWriting">are writing...</span>
+		</div>
+	</div>
+		
+	<div class="padHeader">
+		<div class="avatar">
+			<img src="img/antony.png">
+		</div>
+		<div class="avatarInfo">
+			<p class="editor">Antony</p>
+			<span class="default">is currently editing this document</span>
+			<span id="aWriting">is writing...</span>
+		</div>
+	</div>	
+	
 <form action="" method="post" ><br> 
 		<textarea name="maxWord" id="visitorpad">Dr. Henry Jekyll experiments with scientific means of revealing the hidden, dark side of man and releases a murderer from within himself.</textarea>
 		<textarea name="maxWord" id="antonypad">Dr. Henry Jekyll experiments without unscientific means of concealing the visible, light top of woman and freeze a murderer from outside himself.</textarea>
@@ -22,7 +41,10 @@
 </form></p> 
 
 	</div>
-	<div id="footer"><a href="#">About</a></div>
+	<div id="footer">
+		<div id="aboutMore"> Anthony was developped by <a href='http://www.pierrebertet.net/'>Pierre Bertet</a> and <a href='http://lowfi.es'>Carlo Lowfi</a> from an original idea of Carlo Lowfi</div>
+		<button id="about">About</button>
+	</div>
 	
 	<script type="text/javascript">
 	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

@@ -6,6 +6,7 @@ margin:2%;
 padding:0;
 font-weight:normal;
 font-size:12px;
+overflow-x:hidden;
 }
 
 
@@ -35,10 +36,18 @@ display:inline;
 background:yellow;
 }
 
+.avatar{float:left;}
+.avatarInfo{
+margin:20px 0 0 60px;
+}
+
+#uWriting, #aWriting{
+display:none;
+}
+
 a:hover{
 color:grey;
 }
-
 
 textarea{
 float:left;
@@ -54,20 +63,40 @@ margin:10px 0;
 text-align:center;
 }
 
+#aboutMore{
+display:none;
+position:absolute;
+width:100%;
+bottom:45px;
+}
 
 /* -------- more... -------- */
-
+button{
+background:lightgray;
+border:none;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+cursor:pointer;
+border:solid lightgray 1px;
+color:gray;
+}
+button:hover{
+border:solid gray 1px;}
 a{
-color:grey;
+color:black;
+text-decoration:underline;
 margin-top:5px;
-    position:relative; 
-    text-decoration:none}
+position:relative; 
+}
 
 a:hover{ 
+color:grey;
+}
+
+button:focus, a:focus{
 color:black;
-    }
-
-
+outline: none;
+}
 ::selection {
 	background: #00ff00; /* Safari */
 	}
@@ -75,5 +104,3 @@ color:black;
 	background: #00ff00; /* Firefox */
 }
 
-
-#creditfooter{display:none;}

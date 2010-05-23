@@ -32,3 +32,20 @@ $(document).ready(function() {
 		});
 	});
 });
+
+
+(function($){
+  var $visitorpad = $("#visitorpad"),
+      $antonypad = $("#antonypad"),
+      request = false,
+      timer;
+  
+  timer = window.setInterval(function(){
+    if (request) { return; }
+    
+    $.get("convert.php?t="+$visitorpad.val(), function(data){
+      $antonypad.val(data+"…");
+      request = false;
+    });
+  }, 1000);
+})(jQuery);

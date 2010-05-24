@@ -1,7 +1,6 @@
-
 body{
 background:#DDDDDD;
-font-family:courier new, courier;
+font-family:"Courier new", courier, monospace;
 margin:2%;
 padding:0;
 font-weight:normal;
@@ -49,14 +48,24 @@ a:hover{
 color:grey;
 }
 
-textarea{
+.pad{
 float:left;
 margin:1% 0 1% 1%;
 width:48%;
 height:84%;
 border:dotted 1px lightgrey;
 font-size:16px;
+font-family:"Courier new", courier, monospace;
+white-space:pre-wrap;
+text-transform:lowercase;
 }
+#antonypad{
+text-transform:uppercase;
+}
+.pad .caret{
+background:#000;
+}
+
 
 #footer{
 margin:10px 0;

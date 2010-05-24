@@ -20,7 +20,7 @@ if ( get_magic_quotes_gpc() ) {
 
 if ($raw_text === "") exit();
 
-$ap = new Antony_Parser($raw_text);
+$ap = new Antony_Parser(urldecode($raw_text));
 
 echo $ap->get_antonymized_text();
 

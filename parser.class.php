@@ -18,6 +18,10 @@ class Antony_Parser {
     
     $antonyms = $aQuery->get_antonyms($words_to_translate);
     
+    if (empty($antonyms)) {
+      return $this->orig_text;
+    }
+    
     return $this->stro_replace($words_to_translate, $antonyms, strtolower($this->orig_text));
   }
   

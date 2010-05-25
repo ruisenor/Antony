@@ -12,7 +12,6 @@ overflow-x:hidden;
 
 #container{
 margin:2% 0 0 0;
-padding:1%;
 -moz-border-radius: 10px;
 -webkit-border-radius: 10px;
 -moz-box-shadow: 0 0 5px black;
@@ -67,7 +66,7 @@ text-align:center;
 display:none;
 position:absolute;
 width:100%;
-bottom:45px;
+bottom:60px;
 }
 
 /* -------- more... -------- */

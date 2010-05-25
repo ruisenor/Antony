@@ -61,6 +61,7 @@ text-transform:lowercase;
 }
 #antonypad{
 text-transform:uppercase;
+overflow-y:auto;
 }
 .pad .caret{
 background:#000;

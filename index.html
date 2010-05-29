@@ -1,55 +1,63 @@
-<html>
-<head>
-<title>Antony</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="shortcut icon" href="favicon.gif" type="image/x-icon"/>
-	<link rel="stylesheet" type="text/css" href="style.css" title="style" media="screen" />
-</head>
-<body>
-	<div id="container">
-	<div class="padHeader">
-		<div class="avatar">
-			<img src="img/you.png">
-		</div>
-		<div class="avatarInfo">
-			<p class="editor">You</p>
-			<span id="uWriting">are writing...</span>
-		</div>
-	</div>
-		
-	<div class="padHeader">
-		<div class="avatar">
-			<img src="img/antony.png">
-		</div>
-		<div class="avatarInfo">
-			<p class="editor">Antony</p>
-			<span class="default">is currently editing this document</span>
-			<span id="aWriting">is writing...</span>
-		</div>
-	</div>	
-	
-<form action="" method="post" ><br> 
-		<textarea id="visitorpad" class="pad">Dr. Henry Jekyll experiments with scientific means of revealing the hidden, dark side of man and releases a murderer from within himself.</textarea>
-		<div id="antonypad" class="pad"><span class="content"></span><span class="caret">&nbsp;</span></div>
-<br clear="both">
-</form></p> 
+<!DOCTYPE html>
 
-	</div>
-	<div id="footer">
-		<div id="aboutMore"> Antony was developped by <a href='http://www.pierrebertet.net/'>Pierre Bertet</a> and <a href='http://lowfi.es'>Carlo Lowfi</a> from an original idea of Carlo Lowfi</div>
-		<button id="about">About</button>
-	</div>
+<html>
+	<head>
+	<title>Antony</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="shortcut icon" href="favicon.gif" type="image/x-icon"/>
+		<link rel="stylesheet" type="text/css" href="style.css" title="style" media="screen" />
+	</head>
+	<body>
+		<div id="container">
+		<div class="padHeader">
+			<div class="avatar">
+				<img src="img/you.png">
+			</div>
+			<div class="avatarInfo">
+				<p class="editor">You</p>
+				<span id="uWriting">are writing...</span>
+			</div>
+		</div>
+			
+		<div class="padHeader">
+			<div class="avatar">
+				<img src="img/antony.png">
+			</div>
+			<div class="avatarInfo">
+				<p class="editor">Antony</p>
+				<span class="default">is currently editing this document</span>
+				<span id="aWriting">is writing...</span>
+			</div>
+		</div>	
+		
+		<textarea id="visitorpad" class="autoclear pad">Enter your text here... </textarea>
+		<div id="antonypad" class="pad"><span class="content"></span><span class="caret">&nbsp;</span></div>
 	
-	<script language="javascript" src="js/jquery-1.4.2.min.js" type="text/javascript"></script>	
-	<script language="javascript" src="js/antony.js" type="text/javascript"></script>
-	<script type="text/javascript">
-	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-	</script>
-	<script type="text/javascript">
-	try {
-	var pageTracker = _gat._getTracker("UA-62594-16");
-	pageTracker._trackPageview();
-	} catch(err) {}</script>
-</body>
+		</div>
+		<div id="footer">
+			<div id="aboutMoreBox"> 
+				<div id="aboutMore"> 
+					<p class="cite">"You say white, I say black" A.</p>
+					<br>
+					Antony was developped by <a target="_blank" href='http://www.pierrebertet.net/'>Pierre Bertet</a> and <a target="_blank" href='http://lowfi.es'>Carlo Lowfi</a> <br>from an original idea of Carlo Lowfi<br><br>
+					<button class="open" id="about">Close</button>
+				</div>
+			</div>
+			<button class="open" id="about">About</button>
+		</div>
+		
+		<script language="javascript" src="js/jquery-1.4.2.min.js" type="text/javascript"></script>	
+		<script language="javascript" src="js/unobtusivelib.js" type="text/javascript"></script>
+		<script language="javascript" src="js/antony.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+			try {
+			var pageTracker = _gat._getTracker("UA-62594-16");
+			pageTracker._trackPageview();
+			} catch(err) {}
+		</script>
+	</body>
 </html>

@@ -1,7 +1,12 @@
+// Textarea Autoclear
+jQuery(function(){
+	jQuery.unobtrusivelib();
+});
+
 // About
 (function($){
-  $("#about").click(function() {
-    $("#aboutMore").toggle();
+  $(".open").click(function () {
+    $("#aboutMoreBox").toggle();
   });
 })(jQuery);
 
@@ -61,7 +66,7 @@
       // The user is deleting? Antony too.
       if (writedText !== currentText.slice(0, writedText.length)) {
         writedText = writedText.slice(0,-1);
-        newDelay = 100; // Deleting speed is high and regular
+        newDelay = 70; // Deleting speed is high and regular
         
       // Normal typing
       } else {

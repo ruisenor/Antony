@@ -1,6 +1,6 @@
 // About
 (function($){
-  $("#about").click(function () {
+  $("#about").click(function() {
     $("#aboutMore").toggle();
   });
 })(jQuery);
